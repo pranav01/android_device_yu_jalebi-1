@@ -50,6 +50,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# Disable Jack & Jill compilation
+ANDROID_COMPILE_WITH_JACK := false
+
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
