@@ -80,8 +80,8 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/yu/jalebi/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+ #   device/yu/jalebi/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     system_server.te \
