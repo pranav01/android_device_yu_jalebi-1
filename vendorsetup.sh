@@ -1,0 +1,3 @@
+add_lunch_combo aosp_jalebi-userdebug
+add_lunch_combo aosp_jalebi-eng
+add_lunch_combo aosp_jalebi-user

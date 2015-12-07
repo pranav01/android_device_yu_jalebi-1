@@ -22,7 +22,11 @@ $(call inherit-product, device/yu/jalebi/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := jalebi
-PRODUCT_NAME := full_jalebi
+PRODUCT_NAME := aosp_jalebi
 PRODUCT_BRAND := YU
 PRODUCT_MODEL := YU4711
 PRODUCT_MANUFACTURER := YU
+
+TARGET_VENDOR_PRODUCT_NAME := YUNIQUE
+TARGET_VENDOR_DEVICE_NAME := YUNIQUE
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=YUNIQUE PRODUCT_NAME=YUNIQUE
