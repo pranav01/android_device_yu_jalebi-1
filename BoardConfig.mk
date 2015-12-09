@@ -26,6 +26,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_KERNEL_CONFIG := cyanogenmod_jalebi_defconfig
 
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Bootchart
 ifeq ($(strip $(INIT_BOOTCHART)),true)
 BOARD_KERNEL_CMDLINE += androidboot.bootchart=120
@@ -83,12 +85,8 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
-#BOARD_SEPOLICY_DIRS += \
- #   device/yu/jalebi/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    system_server.te \
-    wcnss_service.te
+BOARD_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy
 
 # Wifi
 TARGET_PROVIDES_WCNSS_QMI := true
